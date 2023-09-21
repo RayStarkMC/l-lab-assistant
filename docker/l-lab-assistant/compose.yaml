@@ -1,0 +1,6 @@
+services:
+  bot:
+    build:
+      context: .
+    env_file:
+      - app-settings.env
