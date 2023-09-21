@@ -1,4 +1,5 @@
 plugins {
+    kotlin("jvm") version "1.9.10"
     application
 }
 
@@ -16,8 +17,11 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
 }
 
-application {
-    mainClass = "raystark.llabassistant.Main"
+application.mainClass.set("raystark.llabassistant.Main")
+
+
+kotlin {
+    jvmToolchain(20)
 }
 
 tasks.test {
